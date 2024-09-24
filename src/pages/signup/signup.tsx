@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
-import "./Signup.css";
+import "./signup.css";
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -76,7 +75,7 @@ const SignupForm = ({
     user_subnational: string;
   };
   handleChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) => (
