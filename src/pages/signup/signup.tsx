@@ -32,11 +32,13 @@ export const Signup = () => {
 
     try {
       const { confirmPassword, ...signupDataToSend } = form;
-      const backendUrl = process.env.REACT_APP_BACKEND_URL_TEST;
-      const backendPort = process.env.REACT_APP_BACKEND_PORT_TEST;
+      const backendUrl = import.meta.env.VITE_BACKEND_URL_TEST;
+      const backendPort = import.meta.env.VITE_BACKEND_PORT_TEST;
 
       if (!backendUrl || !backendPort) {
-        alert("Backend URL or port is missing. Please check your environment variables.");
+        alert(
+          "Backend URL or port is missing. Please check your environment variables.",
+        );
         return;
       }
 
