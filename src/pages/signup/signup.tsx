@@ -32,8 +32,16 @@ export const Signup = () => {
 
     try {
       const { confirmPassword, ...signupDataToSend } = form;
+      const backendUrl = process.env.REACT_APP_BACKEND_URL_TEST;
+      const backendPort = process.env.REACT_APP_BACKEND_PORT_TEST;
+
+      if (!backendUrl || !backendPort) {
+        alert("Backend URL or port is missing. Please check your environment variables.");
+        return;
+      }
+
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL_PROD}:${process.env.REACT_APP_BACKEND_PORT_PROD}/auth/signup`,
+        `${backendUrl}:${backendPort}/auth/signup`,
         signupDataToSend,
       );
       console.log("Signup successful", response.data);
@@ -161,7 +169,7 @@ const SignupForm = ({
         <option value="">Select your state/province</option>
         <option value="CA">California</option>
         <option value="TX">Texas</option>
-        <option value="ON">Ontario</option>
+        <option value="ON">New York</option>
       </select>
     </div>
     <button type="submit">Sign Up</button>
