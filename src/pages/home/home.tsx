@@ -5,7 +5,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <header>
-        <h1>Welcome to Toki Pona Learning</h1>
+        <h1>title</h1>
         <p>testing testing</p>
         <a href="/auth/signup" className="signup-button">
           Sign Up
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         </ul>
       </section>
       <footer>
-        <p>Join our community and start learning today!</p>
+        <p>footer</p>
       </footer>
     </div>
   );
