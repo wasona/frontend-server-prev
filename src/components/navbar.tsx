@@ -1,27 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./navbar.css"; // Import the CSS file
 
-const isLoggedIn: boolean = true;
+const isLoggedIn: boolean = false;
 
 const Navbar: React.FC = () => {
   return (
-    <nav
-      style={{
-        padding: "0.5rem", // Reduced padding to make the navbar less thick
-        background: "#f8f9fa",
-        borderBottom: "1px solid #ddd",
-      }}
-    >
-      <ul
-        style={{
-          listStyle: "none",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ display: "flex" }}>
-          <li style={{ marginRight: "1rem" }}>
+    <nav>
+      <ul>
+        <div>
+          <li>
             <NavLink
               to="/"
               end

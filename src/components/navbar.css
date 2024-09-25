@@ -1,0 +1,43 @@
+nav {
+    padding: 0.25rem;
+    background-color: #6ee6d8;
+    border-bottom: 1px solid #ddd;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul > div {
+    display: flex;
+    margin: 0;
+}
+
+ul > div > li {
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.active {
+    font-weight: bold;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #007bff;
+    color: white
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: white;
+}

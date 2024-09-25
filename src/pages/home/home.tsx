@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         <h2>Getting Started</h2>
         <ul>
           <li>
-            Practice vocabulary: <a href="/vocabulary">Vocabulary</a>
+            <a href="/vocabulary">Practice vocabulary</a>
           </li>
         </ul>
       </section>
