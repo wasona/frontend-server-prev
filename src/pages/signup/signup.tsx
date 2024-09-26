@@ -32,8 +32,8 @@ export const Signup = () => {
 
     try {
       const { confirmPassword, ...signupDataToSend } = form;
-      const backendUrl = import.meta.env.VITE_BACKEND_URL_TEST;
-      const backendPort = import.meta.env.VITE_BACKEND_PORT_TEST;
+      const backendUrl = import.meta.env.VITE_BACKEND_URL;
+      const backendPort = import.meta.env.VITE_BACKEND_PORT;
 
       if (!backendUrl || !backendPort) {
         alert(

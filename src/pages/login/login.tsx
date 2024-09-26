@@ -20,8 +20,8 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-      const backendUrl = import.meta.env.VITE_BACKEND_URL_PROD;
-      const backendPort = import.meta.env.VITE_BACKEND_PORT_PROD;
+      const backendUrl = import.meta.env.VITE_BACKEND_URL;
+      const backendPort = import.meta.env.VITE_BACKEND_PORT;
 
       if (!backendUrl || !backendPort) {
         alert(
