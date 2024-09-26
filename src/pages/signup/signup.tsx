@@ -4,13 +4,13 @@ import "./signup.css";
 
 export const Signup = () => {
   const [form, setForm] = useState({
-    user_email: "",
-    user_pw: "",
+    userEmail: "",
+    userPw: "",
     confirmPassword: "",
-    user_name: "",
-    user_phone: "",
-    user_country: "",
-    user_subnational: "",
+    userName: "",
+    userPhone: "",
+    userCountry: "",
+    userSubnational: "",
   });
 
   const handleChange = (
@@ -25,7 +25,7 @@ export const Signup = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (form.user_pw !== form.confirmPassword) {
+    if (form.userPw !== form.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
@@ -76,13 +76,13 @@ const SignupForm = ({
   handleSubmit,
 }: {
   form: {
-    user_email: string;
-    user_pw: string;
+    userEmail: string;
+    userPw: string;
     confirmPassword: string;
-    user_name: string;
-    user_phone: string;
-    user_country: string;
-    user_subnational: string;
+    userName: string;
+    userPhone: string;
+    userCountry: string;
+    userSubnational: string;
   };
   handleChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -92,34 +92,34 @@ const SignupForm = ({
   <form className="signup-form" onSubmit={handleSubmit}>
     <h2>Sign Up</h2>
     <div className="form-group">
-      <label htmlFor="user_name">Username</label>
+      <label htmlFor="userName">Username</label>
       <input
         type="text"
-        id="user_name"
-        name="user_name"
-        value={form.user_name}
+        id="userName"
+        name="userName"
+        value={form.userName}
         onChange={handleChange}
         required
       />
     </div>
     <div className="form-group">
-      <label htmlFor="user_email">Email</label>
+      <label htmlFor="userEmail">Email</label>
       <input
         type="email" // browser handles validation
-        id="user_email"
-        name="user_email"
-        value={form.user_email}
+        id="userEmail"
+        name="userEmail"
+        value={form.userEmail}
         onChange={handleChange}
         required
       />
     </div>
     <div className="form-group">
-      <label htmlFor="user_pw">Password</label>
+      <label htmlFor="userPw">Password</label>
       <input
         type="password" // browser handles validation
-        id="user_pw"
-        name="user_pw"
-        value={form.user_pw}
+        id="userPw"
+        name="userPw"
+        value={form.userPw}
         onChange={handleChange}
         required
       />
@@ -136,22 +136,22 @@ const SignupForm = ({
       />
     </div>
     <div className="form-group">
-      <label htmlFor="user_phone">Phone</label>
+      <label htmlFor="userPhone">Phone</label>
       <input
         type="text"
-        id="user_phone"
-        name="user_phone"
-        value={form.user_phone}
+        id="userPhone"
+        name="userPhone"
+        value={form.userPhone}
         onChange={handleChange}
         required
       />
     </div>
     <div className="form-group">
-      <label htmlFor="user_country">Country</label>
+      <label htmlFor="userCountry">Country</label>
       <select
-        id="user_country"
-        name="user_country"
-        value={form.user_country}
+        id="userCountry"
+        name="userCountry"
+        value={form.userCountry}
         onChange={handleChange}
         required
       >
@@ -160,11 +160,11 @@ const SignupForm = ({
       </select>
     </div>
     <div className="form-group">
-      <label htmlFor="user_subnational">Subnational</label>
+      <label htmlFor="userSubnational">Subnational</label>
       <select
-        id="user_subnational"
-        name="user_subnational"
-        value={form.user_subnational}
+        id="userSubnational"
+        name="userSubnational"
+        value={form.userSubnational}
         onChange={handleChange}
         required
       >

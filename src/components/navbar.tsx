@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
               </div>
             ) : (
               <NavLink
-                to="/login"
+                to="/auth/login"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 Login
