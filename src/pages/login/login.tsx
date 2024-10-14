@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./login.css"; // Ensure you import the CSS file
+import "./login.css";
 
-// Exporting the Login component
 export const Login = () => {
   const [form, setForm] = useState({
     userEmail: "",
@@ -70,31 +69,37 @@ const LoginForm = ({
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) => (
-  <form className="login-form" onSubmit={handleSubmit}>
-    <h2>Login</h2>
-    <div className="form-group">
-      <label htmlFor="userEmail">Email</label>
-      <input
-        type="email"
-        id="userEmail"
-        name="userEmail"
-        value={form.userEmail}
-        onChange={handleChange}
-        required
-      />
+<form className="login-form" onSubmit={handleSubmit}>
+  <h2>Login</h2>
+  <div className="form-group">
+    <label htmlFor="userEmail">Email</label>
+    <input
+      type="email"
+      id="userEmail"
+      name="userEmail"
+      value={form.userEmail}
+      onChange={handleChange}
+      required
+    />
+  </div>
+  <div className="form-group">
+    <label htmlFor="userPw">Password</label>
+    <input
+      type="password"
+      id="userPw"
+      name="userPw"
+      value={form.userPw}
+      onChange={handleChange}
+      required
+    />
+  </div>
+  <div className="button-container">
+    <div className="button-half">
+      <button type="submit" className="button-style">Login</button>
     </div>
-    <div className="form-group">
-      <label htmlFor="userPw">Password</label>
-      <input
-        type="password"
-        id="userPw"
-        name="userPw"
-        value={form.userPw}
-        onChange={handleChange}
-        required
-      />
+    <div className="button-half">
+      <a href="/auth/signup" className="button-like">Sign Up</a>
     </div>
-    <button type="submit" className="button-style">Login</button>
-    <a href="/auth/signup" className="button-like">Sign Up</a>
-  </form>
+  </div>
+</form>
 );

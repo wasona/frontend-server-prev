@@ -1,8 +1,21 @@
-.button-style,
-.button-like {
-  display: inline-block;
+.button-container {
+  display: flex;
+  width: 100%; /* Spans the entire width of the form */
+}
+
+.button-half {
+  flex: 1; /* Makes sure each button takes up equal space */
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+}
+
+button,
+a.button-like {
+  width: 100%; /* Makes the button fill the container it is in */
+  max-width: 150px; /* Optional: limits button width to not exceed a maximum */
   padding: 10px 20px;
   margin: 5px;
+  font-size: 16px;
   color: #fff;
   background-color: #007bff;
   border: none;
@@ -10,15 +23,19 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-.button-style:hover,
-.button-like:hover {
+button:hover,
+a.button-like:hover {
   background-color: #0056b3;
 }
 
-.button-like {
-  border: none;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px; /* Example width for the form */
+  margin: 0 auto;
 }
