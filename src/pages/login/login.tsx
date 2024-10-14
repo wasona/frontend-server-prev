@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import "./login.css";
+import "./login.css"; // Ensure you import the CSS file
 
+// Exporting the Login component
 export const Login = () => {
   const [form, setForm] = useState({
     userEmail: "",
@@ -24,9 +25,7 @@ export const Login = () => {
       const backendPort = import.meta.env.VITE_BACKEND_PORT;
 
       if (!backendUrl || !backendPort) {
-        alert(
-          "Backend URL or port is missing. Please check your environment variables.",
-        );
+        alert("Backend URL or port is missing. Please check your environment variables.");
         return;
       }
 
@@ -34,6 +33,7 @@ export const Login = () => {
         `${backendUrl}:${backendPort}/auth/login`,
         form,
       );
+
       console.log("Login successful", response.data);
       alert("Login successful!");
     } catch (error: unknown) {
@@ -94,6 +94,7 @@ const LoginForm = ({
         required
       />
     </div>
-    <button type="submit">Login</button>
+    <button type="submit" className="button-style">Login</button>
+    <a href="/auth/signup" className="button-like">Sign Up</a>
   </form>
 );

@@ -5,11 +5,8 @@ const Home: React.FC = () => {
   return (
     <div>
       <header>
-        <h1>title</h1>
-        <p>testing testing</p>
-        <a href="/auth/signup" className="signup-button">
-          Sign Up
-        </a>
+        <h1>Wasona</h1>
+        <p>A modern website for learning Toki Pona.</p>
       </header>
       <section>
         <h2>About Toki Pona</h2>
@@ -23,9 +20,6 @@ const Home: React.FC = () => {
           </li>
         </ul>
       </section>
-      <footer>
-        <p>footer</p>
-      </footer>
     </div>
   );
 };

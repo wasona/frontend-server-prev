@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css"; // Import the CSS file
 
 const Navbar: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
 
   const handleLoginClick = () => {
     // Simulate logging in, toggle the state

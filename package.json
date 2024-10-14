@@ -7,7 +7,7 @@
     "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview --host"
+    "preview": "tsc -b && vite build && vite preview --host"
   },
   "dependencies": {
     "axios": "^1.7.7",

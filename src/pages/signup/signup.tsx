@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./signup.css";
+import FormButton from "../../components/formbutton/formbutton"; // import the FormButton component
 
 export const Signup = () => {
   const [form, setForm] = useState({
@@ -105,7 +106,7 @@ const SignupForm = ({
     <div className="form-group">
       <label htmlFor="userEmail">Email</label>
       <input
-        type="email" // browser handles validation
+        type="email"
         id="userEmail"
         name="userEmail"
         value={form.userEmail}
@@ -116,7 +117,7 @@ const SignupForm = ({
     <div className="form-group">
       <label htmlFor="userPw">Password</label>
       <input
-        type="password" // browser handles validation
+        type="password"
         id="userPw"
         name="userPw"
         value={form.userPw}
@@ -127,7 +128,7 @@ const SignupForm = ({
     <div className="form-group">
       <label htmlFor="confirmPassword">Confirm Password</label>
       <input
-        type="password" // browser handles validation
+        type="password"
         id="confirmPassword"
         name="confirmPassword"
         value={form.confirmPassword}
@@ -174,6 +175,6 @@ const SignupForm = ({
         <option value="ON">New York</option>
       </select>
     </div>
-    <button type="submit">Sign Up</button>
+    <FormButton type="submit">Sign Up</FormButton>
   </form>
 );
